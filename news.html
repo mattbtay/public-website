@@ -3,3 +3,11 @@ layout: default
 ---
 
 <h1>News</h1>
+<ul>
+	{% for news in site.posts  limit:2 %}
+	<li>
+		<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
+		<p>{{ news.meta }}
+	</li>
+	{% endfor %}
+</ul>

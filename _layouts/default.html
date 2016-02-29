@@ -9,6 +9,7 @@
         <title>Jekyll Test</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/style/main.css">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
@@ -19,15 +20,15 @@
 
         <header>
             <h1>Matt Taylor</h1>
-            <nav>
-                <ul>
-                    <li><a href="{{site.baseurl}}/index.html">Home</a></li>
-                    <li><a href="{{site.baseurl}}/news.html">News</a></li>
-                </ul>
-            </nav>
+            {% include nav.html navclass='nav-top' %}
         </header>
 
         {{content}}
+
+        <footer>
+            {% include nav.html navclass='nav-bottom' %}
+            <p>Copyright 2016</p>
+        </footer>
 
 
          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
